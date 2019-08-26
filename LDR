@@ -1,0 +1,24 @@
+int LDR=0;
+int LDRV=0;
+int light=500;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(11,OUTPUT);
+}
+void loop()
+{
+  LDRV=analogRead(LDR);
+  Serial.println(LDRV);
+  delay(50);
+  if(LDRV<light)
+  {
+    digitalWrite(11,HIGH);
+  }
+  else
+  {
+    digitalWrite(11,LOW);
+  }
+  delay(1000);
+  
+}
