@@ -1,0 +1,20 @@
+const int butt=2;
+const int led=13;
+int buttsta=0;
+void setup()
+{
+  pinMode(led,OUTPUT);
+  pinMode(butt,INPUT);
+}
+void loop()
+{
+  buttsta=digitalRead(butt);
+  if(buttsta==HIGH)
+  {
+    digitalWrite(led,HIGH);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+  }
+}
